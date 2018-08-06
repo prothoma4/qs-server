@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Ulistic" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="ulq2answer" name="UL.Q2">
+    <extensionElements>
+      <biodi:bounds x="158" y="146" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1">
+      <input id="input_1" label="Diploma" camunda:inputVariable="q2QuestionA">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1cthqtf" label="Laurea/Specializzazione post laurea" camunda:inputVariable="q2QuestionB">
+        <inputExpression id="LiteralExpression_0szkb9v" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_09tw0sb" label="Diploma/Laurea/specializzazione post laurea in discipline economico finanziarie" camunda:inputVariable="q2QuestionC">
+        <inputExpression id="LiteralExpression_1ffwl4b" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1iwy0ty" label="Altro (es. licenzia media, ecc.)" camunda:inputVariable="q2QuestionD">
+        <inputExpression id="LiteralExpression_15nanqu" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0cmw5nl" label="WeightedScore" name="q2WeightedScore" typeRef="double" />
+      <rule id="DecisionRule_1dl75k1">
+        <description></description>
+        <inputEntry id="UnaryTests_1rwuylm">
+          <text>"X"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ky9xe2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c0ajiw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19u0pao">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a3u844">
+          <text>10</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l0h7yd">
+        <description></description>
+        <inputEntry id="UnaryTests_162mbp9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z8z6lb">
+          <text>"X"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0txs6k0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09eital">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_132cc28">
+          <text>40</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16ht6o3">
+        <description></description>
+        <inputEntry id="UnaryTests_0c0jwvo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16jxamp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00cor47">
+          <text>"X"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mlw2zi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08uuv5c">
+          <text>60</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1subf94">
+        <description></description>
+        <inputEntry id="UnaryTests_12vputa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e33yb8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mqdlvw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03zypkm">
+          <text>"X"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0142v2x">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="ulq4answer" name="UL.Q4">
+    <extensionElements>
+      <biodi:bounds x="361" y="146" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_0o83v8z">
+      <input id="InputClause_0d1oj5k" label="SI" camunda:inputVariable="q4QuestionA">
+        <inputExpression id="LiteralExpression_0lh3hs8" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1y87oca" label="NO" camunda:inputVariable="q4QuestionB">
+        <inputExpression id="LiteralExpression_1yxe24x" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0quab6v" label="WeightedScore" name="q4WeightedScore" typeRef="double" />
+      <rule id="DecisionRule_0ts1fab">
+        <description></description>
+        <inputEntry id="UnaryTests_1yzxj3p">
+          <text>"X"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fkkojs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rl43gh">
+          <text>60</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hwtcpu">
+        <description></description>
+        <inputEntry id="UnaryTests_0zwab6p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o2nrxu">
+          <text>"X"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x22ad9">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="ulq8answer" name="UL.Q8.Max">
+    <extensionElements>
+      <biodi:bounds x="562" y="146" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_095nbui" hitPolicy="COLLECT" aggregation="MAX">
+      <input id="InputClause_0zjtwl8" label="Titoli di stato" camunda:inputVariable="q8QuestionA">
+        <inputExpression id="LiteralExpression_0hsnqj7" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_04tuviu" label="Obbligazioni" camunda:inputVariable="q8QuestionB">
+        <inputExpression id="LiteralExpression_1ur60n2" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0fw41s8" label="Polizze Unit linked " camunda:inputVariable="q8QuestionC">
+        <inputExpression id="LiteralExpression_0t8hmd7" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0c02kbz" label="Polizze Vita tradizionali" camunda:inputVariable="q8QuestionD">
+        <inputExpression id="LiteralExpression_1lrauvt" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1id8fjp" label="Quote di fondi" camunda:inputVariable="q8QuestionE">
+        <inputExpression id="LiteralExpression_0yd8hv2" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0bcpgzc" label="Nessuno dei precedenti" camunda:inputVariable="q8QuestionF">
+        <inputExpression id="LiteralExpression_1xw0lva" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0xh5dj4" label="WeightedScore" name="q8WeightedScore" typeRef="double" />
+      <rule id="DecisionRule_1c6yipu">
+        <inputEntry id="UnaryTests_0uaqpfd">
+          <text>"Conosce"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06r56x4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13lfomj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dz7cxy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16j1o1d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p3qe5q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13dg7hk">
+          <text>30</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1l3ot8u">
+        <inputEntry id="UnaryTests_03ez9pc">
+          <text>"Detiene"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rf9hbc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h77h7t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_185ahvn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ko4oyr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_097iv79">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ekodiz">
+          <text>30</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1egde35">
+        <description></description>
+        <inputEntry id="UnaryTests_0uib2sk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12b9s0m">
+          <text>"Conosce"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ddug75">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u2f7mv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03afnqu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o1qma9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ul2tlh">
+          <text>60</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1svwja6">
+        <description></description>
+        <inputEntry id="UnaryTests_01xuf4w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lo1sno">
+          <text>"Detiene"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xqwbg6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ta0g70">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t7jsq6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11t4i9i">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06glclb">
+          <text>60</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pkrvr1">
+        <description></description>
+        <inputEntry id="UnaryTests_0e3q38r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tj6n5n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xs8hg2">
+          <text>"Conosce"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iz8ovy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wfv8x2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w7rkrw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k9tix5">
+          <text>180</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1je2ny3">
+        <description></description>
+        <inputEntry id="UnaryTests_1500bbz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b7m9ea">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w3k3nd">
+          <text>"Detiene"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jx6jww">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zuf6gj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0843twy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fgie3s">
+          <text>180</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1x702vp">
+        <description></description>
+        <inputEntry id="UnaryTests_092z0qa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j9n0v2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06566on">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1afogdj">
+          <text>"Conosce"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mvw4tw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03vp4ok">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tyy21o">
+          <text>60</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bl8xqq">
+        <description></description>
+        <inputEntry id="UnaryTests_068mahp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0emnzsh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cl04y9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q2ujws">
+          <text>"Detiene"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j98pib">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09zutat">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_149sne7">
+          <text>120</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08z55n1">
+        <description></description>
+        <inputEntry id="UnaryTests_0uuddzh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yj5961">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14p8u44">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08b60zk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14eryia">
+          <text>"Conosce"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qayvbd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_012y5lg">
+          <text>150</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0woj9k3">
+        <description></description>
+        <inputEntry id="UnaryTests_0g9u9tw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qvp0et">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dn1avz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07tcd9d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eazco4">
+          <text>"Detiene"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02qg1oj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v9ho1j">
+          <text>120</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p1979m">
+        <inputEntry id="UnaryTests_0ooxi8i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eb5m4g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08fawyy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06au42x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1doom8h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0efv0l5">
+          <text>"Conosce"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02t2hph">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1w7wigr">
+        <inputEntry id="UnaryTests_1jsu0bw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1plmfev">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rxu096">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xmuq7o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19uovnx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17ztape">
+          <text>"Detiene"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ojpxj0">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="ulq9answer" name="UL.Q9.Sum">
+    <extensionElements>
+      <biodi:bounds x="762" y="146" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_1xmdk6v" hitPolicy="COLLECT" aggregation="SUM">
+      <input id="InputClause_19jxwal" label="Azionario" camunda:inputVariable="q9QuestionA">
+        <inputExpression id="LiteralExpression_13xesbr" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_031qhl0" label="Monetario" camunda:inputVariable="q9QuestionB">
+        <inputExpression id="LiteralExpression_16nro4h" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_133q6zm" label="Obbligazionario" camunda:inputVariable="q9QuestionC">
+        <inputExpression id="LiteralExpression_164enz1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1b3x1xu" label="WeightedScore" name="q9WeightedScore" typeRef="double" />
+      <rule id="DecisionRule_1tixqa8">
+        <description></description>
+        <inputEntry id="UnaryTests_15s2efb">
+          <text>"Basso"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1619vnc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u237yo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0x0gen6">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ik9cvy">
+        <description></description>
+        <inputEntry id="UnaryTests_0gatlp1">
+          <text>"Alto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00bi3ou">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gqagqg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q5bgtl">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ylbhga">
+        <description></description>
+        <inputEntry id="UnaryTests_1306s4t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qa08lb">
+          <text>"Basso"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jtc2fl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v4xvoq">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hwhypf">
+        <description></description>
+        <inputEntry id="UnaryTests_1kdt1qw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ecc8wp">
+          <text>"Alto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cwyb85">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fvuwy7">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ek3a5y">
+        <inputEntry id="UnaryTests_19z8a8x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05r1seq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1htktnm">
+          <text>"Basso"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1j36m12">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fwwfuk">
+        <inputEntry id="UnaryTests_1oxrxyf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ckzd8h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q4kzly">
+          <text>"Alto"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ydpjhz">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="decision" name="Experience And Knowledge Score">
+    <extensionElements>
+      <biodi:bounds x="442" y="265" width="180" height="80" />
+      <biodi:edge source="ulq2answer">
+        <biodi:waypoints x="300" y="226" />
+        <biodi:waypoints x="464" y="265" />
+      </biodi:edge>
+      <biodi:edge source="ulq4answer">
+        <biodi:waypoints x="473" y="226" />
+        <biodi:waypoints x="510" y="265" />
+      </biodi:edge>
+      <biodi:edge source="ulq8answer">
+        <biodi:waypoints x="626" y="226" />
+        <biodi:waypoints x="548" y="265" />
+      </biodi:edge>
+      <biodi:edge source="ulq9answer">
+        <biodi:waypoints x="792" y="226" />
+        <biodi:waypoints x="604" y="265" />
+      </biodi:edge>
+    </extensionElements>
+    <variable id="InformationItem_0u1vy25" name="answerExpKnowScore" typeRef="double" />
+    <informationRequirement>
+      <requiredDecision href="#ulq2answer" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#ulq4answer" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#ulq8answer" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#ulq9answer" />
+    </informationRequirement>
+    <literalExpression id="LiteralExpression_0bcqah4" expressionLanguage="javascript">
+      <text>Math.max(q2WeightedScore,q4WeightedScore)+q8WeightedScore+q9WeightedScore</text>
+    </literalExpression>
+  </decision>
+  <decision id="experience-knowledge-profile" name="Experience And Knowledge Profile">
+    <extensionElements>
+      <biodi:bounds x="440" y="375" width="180" height="80" />
+      <biodi:edge source="decision">
+        <biodi:waypoints x="521" y="345" />
+        <biodi:waypoints x="560" y="375" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#decision" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1lgfkld">
+      <input id="InputClause_1rhywkj" label="Score between" camunda:inputVariable="expKnowScoreRange">
+        <inputExpression id="LiteralExpression_1n1zxel" typeRef="double">
+          <text>answerExpKnowScore</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_04k6lz4" label="Fascia : Profilo di Esperienza &#38; Conoscenza" name="decisionValue" typeRef="string" />
+      <rule id="DecisionRule_1t892y8">
+        <inputEntry id="UnaryTests_1u1xwuw">
+          <text>[0..99]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16a0f27">
+          <text>"Basso"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0v3n1ie">
+        <inputEntry id="UnaryTests_1v05xuc">
+          <text>[100..199]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wjidjn">
+          <text>"Medio"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1jrihyg">
+        <inputEntry id="UnaryTests_1m4spu1">
+          <text>[200..300]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tjrbpa">
+          <text>"Alto"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
